@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Saint Lauren</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+    <script src="assets/json/data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12  ">
+                <ul class="  breadcrumb align-items-center">
+                    <span class="h4 mt-2 fw-bolder txt2">Saint Lauren</span>
+                    <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+                    <li class=""><a href="saintlauren.html">Saint Lauren</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+    <div class="row" id="product-container">
+        <script>
+            function gotoDetailPage(name, image, price) {
+                localStorage.setItem("pname", name);
+                localStorage.setItem("pimage", image);
+                localStorage.setItem("pprice", price);
+                window.location.href = "product-details.html"; 
+            }
+        
+            
+            var sproduct = [
+    {
+        "sname": "DUFFLE SAC DE JOUR BLACK",
+        "sdetails": "Classic black leather bag with sleek design.",
+        "sprice": "$1,250.00",
+        "simage": "assets/brand pics/Saint Laurent/DUFFLE SAC DE JOUR IN SUPPLE GRAINED LEATHER BLACK-removebg-preview.jpg"
+    },
+    {
+        "sname": "DUFFLE SAC DE JOUR BROWN",
+        "sdetails": "Rich brown leather for an elegant, refined look.",
+        "sprice": "$1,350.00",
+        "simage": "assets/brand pics/Saint Laurent/DUFFLE SAC DE JOUR IN SUPPLE GRAINED LEATHER-removebg-preview.jpg"
+    },
+    {
+        "sname": "LE 5 A 7 SUPPLE PINK",
+        "sdetails": "Soft, blush pink with smooth grained leather.",
+        "sprice": "$1,100.00",
+        "simage": "assets/brand pics/Saint Laurent/LE 5 A 7 SUPPLE LARGE IN GRAINED LEATHER PINK-removebg-preview.jpg"
+    },
+    {
+        "sname": "LE 5 A 7 SUPPLE BROWN",
+        "sdetails": "Stylish, spacious brown leather bag for daily use.",
+        "sprice": "$1,400.00",
+        "simage": "assets/brand pics/Saint Laurent/LE 5 A 7 SUPPLE LARGE IN GRAINED LEATHER-removebg-preview.jpg"
+    },
+    {
+        "sname": "SAINT LAURENT PARIS BROWN",
+        "sdetails": "Compact, high-quality leather wallet with subtle elegance.",
+        "sprice": "$450.00",
+        "simage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS BROWN-removebg-preview.jpg"
+    },
+    {
+        "sname": "SAINT LAURENT PARIS CROCODILE",
+        "sdetails": "Luxurious croc-embossed leather wallet for timeless style.",
+        "sprice": "$600.00",
+        "simage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS CROCODILE-removebg-preview.jpg"
+    },
+    {
+        "sname": "SAINT LAURENT PARIS LAMBSKIN",
+        "sdetails": "Soft lambskin leather for a refined, sophisticated look.",
+        "sprice": "$1,300.00",
+        "simage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS LAMBSKIN-removebg-preview.jpg"
+    },
+    {
+        "sname": "SAINT LAURENT PARIS",
+        "sdetails": "Elegant leather bag with smooth, polished finish.",
+        "sprice": "$1,450.00",
+        "simage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS-removebg-preview.jpg"
+    },
+    {
+        "sname": "Y TOTE IN LEATHER BLACK",
+        "sdetails": "Chic black leather tote, perfect for everyday wear.",
+        "sprice": "$950.00",
+        "simage": "assets/brand pics/Saint Laurent/Y TOTE IN LEATHER BLACK-removebg-preview.jpg"
+    },
+    {
+        "sname": "Y TOTE IN LEATHER",
+        "sdetails": "Sleek leather tote in versatile tones for effortless style.",
+        "sprice": "$1,050.00",
+        "simage": "assets/brand pics/Saint Laurent/Y TOTE IN LEATHER-removebg-preview.jpg"
+    }
+];
+
+
+
+        
+            
+            for (var i = 0; i < sproduct.length; i++) {
+               
+                if (sproduct[i].sname && sproduct[i].sdetails) {
+                    document.write(`
+                        <div class="col-md-4 productCard" onclick='gotoDetailPage("${sproduct[i].sname}", "${sproduct[i].simage}", "${sproduct[i].sprice}")'>
+                            <div class="product-card">
+                                <div class="div">
+                                    <img src="${sproduct[i].simage}" class="img-fluid imgborder" alt=""/>
+                                </div>
+                                <a href="product-details.html" class="txt4">${sproduct[i].sname}</a>
+                                <p class="txt3">${sproduct[i].sdetails}</p>
+                                <h5 class="price">${sproduct[i].sprice}</h5>
+                            </div>
+                        </div>
+                    `);
+                }
+            }
+        </script>
+        
+    </div>
+
+</div>
+
+
+
+    <footer id="footer">
+
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="assets/scripts/repeat.js"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+
+
+    <script>
+        function displayProducts() {
+            const row = document.getElementById("product-container")
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Wallets</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+    <script src="assets/json/data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12  ">
+                <ul class="  breadcrumb align-items-center">
+                    <span class="h4 mt-2 fw-bolder txt2">Wallet</span>
+                    <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+                    <li class=""><a href="wallet.html">Wallet</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row" id="product-container">
+            <script>
+                function gotoDetailPage(name, image, price) {
+                    localStorage.setItem("pname", name);
+                    localStorage.setItem("pimage", image);
+                    localStorage.setItem("pprice", price);
+                    window.location.href = "product-details.html";
+                }
+
+
+
+                var wproduct = [
+                    {
+                        "wname": "Jumbo GG",
+                        "wdetails": "Bold GG logo pouch with versatile design.",
+                        "wprice": "$850.00",
+                        "wimage": "assets/brand pics/Gucci/Jumbo_GG_pouch-removebg-preview.png"
+                    },
+
+                    {
+                        "wname": "DOUBLE CARD HOLDER",
+                        "wdetails": "Compact, efficient holder for your essentials.",
+                        "wprice": "$350.00",
+                        "wimage": "assets/brand pics/Loius Vitton/louis-vuitton-double-card-holder-removebg-preview.png"
+                    },
+                    {
+                        "wname": "ENVELOPE CARTE DE",
+                        "wdetails": "Chic envelope-style card holder for convenience.",
+                        "wprice": "$450.00",
+                        "wimage": "assets/brand pics/Loius Vitton/louis-vuitton-enveloppe-carte-de-removebg-preview.png"
+                    },
+                    {
+                        "wname": "SAINT LAURENT PARIS BROWN",
+                        "wdetails": "Compact, high-quality leather wallet with subtle elegance.",
+                        "wprice": "$450.00",
+                        "wimage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS BROWN-removebg-preview.jpg"
+                    },
+                    {
+                        "wname": "SAINT LAURENT PARIS CROCODILE",
+                        "wdetails": "Luxurious croc-embossed leather wallet for timeless style.",
+                        "wprice": "$600.00",
+                        "wimage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS CROCODILE-removebg-preview.jpg"
+                    },
+                    {
+                        "wname": "SAINT LAURENT PARIS LAMBSKIN",
+                        "wdetails": "Soft lambskin leather for a refined, sophisticated look.",
+                        "wprice": "$1,300.00",
+                        "wimage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS LAMBSKIN-removebg-preview.jpg"
+                    },
+                    {
+                        "wname": "SAINT LAURENT PARIS",
+                        "wdetails": "Elegant leather bag with smooth, polished finish.",
+                        "wprice": "$1,450.00",
+                        "wimage": "assets/brand pics/Saint Laurent/SAINT LAURENT PARIS-removebg-preview.jpg"
+                    },
+                ];
+
+                for (var i = 0; i < wproduct.length; i++) {
+                    if (wproduct[i].wname && wproduct[i].wdetails) {
+                        document.write(`
+            <div class="col-md-4 productCard" onclick='gotoDetailPage("${wproduct[i].wname}", "${wproduct[i].wimage}", "${wproduct[i].wprice}")'>
+                <div class="product-card">
+                    <div class="div">
+                        <img src="${wproduct[i].wimage}" class="img-fluid imgborder" alt=""/>
+                    </div>
+                    <a href="product-details.html" class="txt4">${wproduct[i].wname}</a>
+                    <p class="txt3">${wproduct[i].wdetails}</p>
+                    <h5 class="price">${wproduct[i].wprice}</h5>
+                </div>
+            </div>
+        `);
+                    }
+                }
+
+
+            </script>
+
+        </div>
+
+    </div>
+
+
+
+    <footer id="footer">
+
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="assets/scripts/repeat.js"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+
+
+    <script>
+        function displayProducts() {
+            const row = document.getElementById("product-container")
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

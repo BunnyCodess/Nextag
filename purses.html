@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Purses</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+    <script src="assets/json/data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12  ">
+                <ul class="  breadcrumb align-items-center">
+                    <span class="h4 mt-2 fw-bolder txt2">Purses</span>
+                    <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+                    <li class=""><a href="purses.html">Purses</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="row" id="product-container">
+            <script>
+                function gotoDetailPage(name, image, price) {
+                    localStorage.setItem("pname", name);
+                    localStorage.setItem("pimage", image);
+                    localStorage.setItem("pprice", price);
+                    window.location.href = "product-details.html";
+                }
+
+
+                var aproduct = [
+                    {
+                        "aname": "DUFFLE SAC DE JOUR BLACK",
+                        "adetails": "Classic black leather bag with sleek design.",
+                        "aprice": "$1,250.00",
+                        "aimage": "assets/brand pics/Saint Laurent/DUFFLE SAC DE JOUR IN SUPPLE GRAINED LEATHER BLACK-removebg-preview.jpg"
+                    },
+                    {
+                        "aname": "DUFFLE SAC DE JOUR BROWN",
+                        "adetails": "Rich brown leather for an elegant, refined look.",
+                        "aprice": "$1,350.00",
+                        "aimage": "assets/brand pics/Saint Laurent/DUFFLE SAC DE JOUR IN SUPPLE GRAINED LEATHER-removebg-preview.jpg"
+                    },
+                    {
+                        "aname": "LE 5 A 7 SUPPLE PINK",
+                        "adetails": "Soft, blush pink with smooth grained leather.",
+                        "aprice": "$1,100.00",
+                        "aimage": "assets/brand pics/Saint Laurent/LE 5 A 7 SUPPLE LARGE IN GRAINED LEATHER PINK-removebg-preview.jpg"
+                    },
+                    {
+                        "aname": "LE 5 A 7 SUPPLE BROWN",
+                        "adetails": "Stylish, spacious brown leather bag for daily use.",
+                        "aprice": "$1,400.00",
+                        "aimage": "assets/brand pics/Saint Laurent/LE 5 A 7 SUPPLE LARGE IN GRAINED LEATHER-removebg-preview.jpg"
+                    },
+                    {
+                        "aname": "Y TOTE IN LEATHER BLACK",
+                        "adetails": "Chic black leather tote, perfect for everyday wear.",
+                        "aprice": "$950.00",
+                        "aimage": "assets/brand pics/Saint Laurent/Y TOTE IN LEATHER BLACK-removebg-preview.jpg"
+                    },
+                    {
+                        "aname": "Y TOTE IN LEATHER",
+                        "adetails": "Sleek leather tote in versatile tones for effortless style.",
+                        "aprice": "$1,050.00",
+                        "aimage": "assets/brand pics/Saint Laurent/Y TOTE IN LEATHER-removebg-preview.jpg"
+                    },
+                    {
+                        "aname": "BOULOGE BLACK",
+                        "adetails": "Elegant, timeless design in classic black.",
+                        "aprice": "$980.00",
+                        "aimage": "assets/brand pics/Loius Vitton/BOULOGE_BLACK-removebg-preview.png"
+                    },
+                    {
+                        "aname": "BOULOGE BROWN BLACK",
+                        "adetails": "Sophisticated blend of brown and black.",
+                        "aprice": "$1,050.00",
+                        "aimage": "assets/brand pics/Loius Vitton/BOULOGE_BROWN_BLACK-removebg-preview.png"
+                    },
+                    {
+                        "aname": "BOULOGE CREAM",
+                        "adetails": "Soft, neutral tone for versatile style.",
+                        "aprice": "$950.00",
+                        "aimage": "assets/brand pics/Loius Vitton/BOULOGE_CREAM-removebg-preview.png"
+                    },
+                    {
+                        "aname": "BOSPHORE WEARABLE",
+                        "adetails": "Modern, functional wearable with sleek design.",
+                        "aprice": "$1,200.00",
+                        "aimage": "assets/brand pics/Loius Vitton/louis-vuitton-bosphore-wearable-removebg-preview.png"
+                    },
+                    {
+                        "aname": "STEAMER WEARABLE BROWN",
+                        "adetails": "Stylish, comfortable brown wearable for daily use.",
+                        "aprice": "$1,150.00",
+                        "aimage": "assets/brand pics/Loius Vitton/louis-vuitton-steamer-wearable-w-removebg-preview.png"
+                    },
+                    {
+                        "aname": "STEAMER WEARABLE BLACK",
+                        "adetails": "Sleek black wearable with effortless style.",
+                        "aprice": "$1,180.00",
+                        "aimage": "assets/brand pics/Loius Vitton/louis-vuitton-steamer-wearable-w__1_-removebg-preview.png"
+                    },
+                    {
+                        "aname": "SUNSET",
+                        "adetails": "Warm, golden hues capturing sunset vibes.",
+                        "aprice": "$850.00",
+                        "aimage": "assets/brand pics/Loius Vitton/SUNSET-removebg-preview.png"
+                    },
+                    {
+                        "aname": "SUNSET VIBE",
+                        "adetails": "Relaxing, warm tones inspired by sunsets.",
+                        "aprice": "$870.00",
+                        "aimage": "assets/brand pics/Loius Vitton/SUNSET_VIBE-removebg-preview.png"
+                    },
+                    {
+                        "aname": "GG EMBLEM BLACK",
+                        "adetails": "Sleek black shoulder bag for everyday use.",
+                        "aprice": "$980.00",
+                        "aimage": "assets/brand pics/Gucci/GG Emblem small shoulder bag Black.jpg"
+                    },
+                    {
+                        "aname": "GG EMBLEM BROWN",
+                        "adetails": "Elegant brown shoulder bag with classic logo.",
+                        "aprice": "$1,050.00",
+                        "aimage": "assets/brand pics/Gucci/GG Emblem small shoulder bag Brown.jpg"
+                    },
+                    {
+                        "aname": "GUCCI HORSEBIT 1955 ",
+                        "adetails": "Chic mini shoulder bag with vintage charm.",
+                        "aprice": "$1,150.00",
+                        "aimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 mini shoulder bag Cream.jpg"
+                    },
+                    {
+                        "aname": "GUCCI HORSEBIT 1955",
+                        "adetails": "Stylish maroon mini shoulder bag with hardware.",
+                        "aprice": "$1,200.00",
+                        "aimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 mini shoulder bag Maroon.jpg"
+                    },
+                    {
+                        "aname": "GUCCI HORSEBIT 1955",
+                        "adetails": "Timeless cream small shoulder bag with elegance.",
+                        "aprice": "$1,180.00",
+                        "aimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 small shoulder bag Cream.jpg"
+                    },
+                    {
+                        "aname": "GUCCI HORSEBIT 1955",
+                        "adetails": "Classic maroon small shoulder bag with luxury appeal.",
+                        "aprice": "$1,250.00",
+                        "aimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 small shoulder bag Maroon.jpg"
+                    },
+                    {
+                        "aname": "JUMBO GG SUPER",
+                        "adetails": "Mini GG bag with a modern flair.",
+                        "aprice": "$980.00",
+                        "aimage": "assets/brand pics/Gucci/Jumbo_GG_super_mini_bag-removebg-preview.png"
+                    },
+                    {
+                        "aname": "SMALL GG",
+                        "adetails": "Trendy crossbody bag with signature GG style.",
+                        "aprice": "$950.00",
+                        "aimage": "assets/brand pics/Gucci/Small_GG_crossbody_bag-removebg-preview.png"
+                    },
+                    {
+                        "aname": "SUPER MINI GG",
+                        "adetails": "Compact mini bag with iconic GG logo.",
+                        "aprice": "$850.00",
+                        "aimage": "assets/brand pics/Gucci/Super_mini_GG_bag-removebg-preview.png"
+                    }
+
+                ];
+
+
+
+                for (var i = 0; i < aproduct.length; i++) {
+
+                    if (aproduct[i].aname && aproduct[i].adetails) {
+                        document.write(`
+            <div class="col-md-4 productCard" onclick='gotoDetailPage("${aproduct[i].aname}", "${aproduct[i].aimage}", "${aproduct[i].aprice}")'>
+                <div class="product-card">
+                    <div class="div">
+                        <img src="${aproduct[i].aimage}" class="img-fluid imgborder" alt=""/>
+                    </div>
+                    <a href="product-details.html" class="txt4">${aproduct[i].aname}</a>
+                    <p class="txt3">${aproduct[i].adetails}</p>
+                    <h5 class="price">${aproduct[i].aprice}</h5>
+                </div>
+            </div>
+        `);
+                    }
+                }
+
+            </script>
+
+        </div>
+
+    </div>
+
+
+
+    <footer id="footer">
+
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="assets/scripts/repeat.js"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+
+
+    <script>
+        function displayProducts() {
+            const row = document.getElementById("product-container")
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

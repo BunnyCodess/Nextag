@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nextag - Products</title>
+  <!-- icon link -->
+  <link rel="website icon" type="png" href="assets/images/logo.png">
+  <!-- icon link -->
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css">
+  <!-- css link -->
+  <!-- bootstrap 5 cdn -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- bootstrap 5 cdn -->
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/font-all.min.css">
+  <!-- font awesome cdn -->
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <script src="assets/json/product.js"></script>
+  <!-- google font link -->
+</head>
+
+<body>
+  <header id="header">
+ 
+  </header>
+  <hr>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12  ">
+        <ul class="  breadcrumb align-items-center">
+          <span class="h4 mt-2 fw-bolder">Products</span>
+          <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+          <li class=""><a href="products.html">Products</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row" id="product-container">
+      <script>
+        function gotoDetailPage(name, image, price) {
+          localStorage.setItem("pname", name)
+          localStorage.setItem("pimage", image)
+          localStorage.setItem("pprice", price)
+          window.location.href = "product-details.html"
+        }
+
+       for (var i = 0; i < alldata.length; i++) {
+    document.write(`
+        <div class="col-md-2 productCard" onclick='gotoDetailPage("${alldata[i].allname}", "${alldata[i].allimage}", "${alldata[i].allprice}")'>
+            <div class="product-card">
+                <img src="${alldata[i].allimage}" class="img-fluid imgborder" alt=""/>
+                <a href="product-details.html" class="txt4">${alldata[i].allname}</a>
+                <p class="txt3">${alldata[i].alldetails}</p>
+                <h5 class="price">${alldata[i].allprice}</h5>
+            </div>
+        </div>
+    `);
+}
+
+      </script>
+
+    </div>
+  </div>
+  </div>
+
+  <footer id="footer">
+    
+  </footer>
+  <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+</body>
+<script src="assets/scripts/popper.min.js"></script>
+<script src="assets/scripts/bootstrap.min.js"></script>
+<script src="assets/scripts/repeat.js"></script>
+<script>
+  function displayProducts() {
+    const row = document.getElementById("product-container")
+
+
+  }
+
+</script>
+</html>

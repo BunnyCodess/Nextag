@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="assets/json/data.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Latest Fashion</title>
+    <!-- icon link -->
+    <link rel="website icon" type="png" href="assets/images/logo.png">
+    <!-- icon link -->
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href=""><span class="span2">Home</span></a></li>
+                    <li><a href=""><span class="span2">Purses</span></a></li>
+                    <li>Product</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-7">
+                <img src="" class="img-fluid" alt="" id="product-image">
+            </div>
+            <div class="col-md-5">
+                <h4 class="txt2" id="product-name"></h4>
+                <div class="div d-flex gap-1">
+                    <i class="fa-solid fa-star mt-1" style="color: #848484; font-size: 11px; "></i>
+                    <i class="fa-solid fa-star mt-1" style="color: #848484; font-size: 11px; "></i>
+                    <i class="fa-solid fa-star mt-1" style="color: #848484; font-size: 11px; "></i>
+                    <i class="fa-solid fa-star mt-1" style="color: #848484; font-size: 11px; "></i>
+                    <i class="fa-solid fa-star mt-1" style="color: #848484; font-size: 11px; "></i>
+                    <span class="ms-2 mb-1">0 Reviews</span>
+                    <button class="custombtn">IN STOCK</button>
+                </div>
+                <h2 class="product-price mt-3" id="product-price"></h2>
+                <div class=" d-flex flex-row mt-4 justify-content-between">
+                    <div class="custom d-flex  justify-content-between  align-items-center">
+                        <button onclick="minus()">-</button>
+                        <p id="e" class="m-0">1</p>
+                        <button onclick="plus()">+</button>
+
+                    </div>
+                    <a href="cart.html"><button class="custombtn2">ADD TO CART</button></a>
+                </div>
+                <hr>
+                <a href="checkout.html"><button class="custombtn3 w-100">BUY NOW</button></a>
+
+                <a href="WordFiles/INFORMATION OF THE PRODUCT.docx"><button class="custombtn3 w-100 mt-3">Download
+                        Info</button></a>
+                <hr>
+
+                <span>Share:</span>
+                <i class="fa-brands fa-facebook ifb"></i>
+
+                <i class="fa-brands fa-instagram iinsta"></i>
+
+
+                <i class="fa-brands fa-youtube iyt"></i>
+            </div>
+        </div>
+
+        <div class="row  border">
+
+
+            <div class="col-md-6">
+                <h2 class="txt2 ">
+                    Product Details
+                </h2>
+                <ul class="">
+                    <li>
+                        <p> Gucci:
+                            Choose Gucci for bold, statement-making designs featuring the iconic GG logo and vibrant details. Perfect for fashion-forward, standout looks.</p>
+                    </li>
+                    <li>
+                        <p> Louis Vuitton:
+                            Opt for Louis Vuitton for timeless luxury with classic designs like the Speedy and Neverfull. Known for both durability and style, making it a great investment.</p>
+                    </li>
+                    <li>
+                        <p> Saint Laurent:
+                            Go for Saint Laurent if you prefer sleek, minimalist elegance. Their refined bags offer understated luxury, ideal for both casual and formal occasions.</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-6 mb-2 border-start">
+                <h2 class="txt2">Submit a Review</h2>
+                <form>
+                    <div class="row">
+                        <div class="col">  
+                            <input type="text" class="form-control"  placeholder="Name" name="name" required>
+                            <div class="invalid-feedback">Please Enter Your Name</div>
+                        </div>
+                        
+                        <div class="col-12 mt-3">                
+                            <input type="email" class="form-control"  placeholder="Email" name="email" required>
+                            <div class="invalid-feedback">Please Enter Your Email</div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <textarea type="textarea" rows="4" cols="50" class="form-control" placeholder="Your Review " name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning mt-2 btncon">SUBMIT NOW</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <footer id="footer">
+
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+
+
+
+</body>
+<script>
+    function showProduct() {
+        document.getElementById("product-image").setAttribute('src', localStorage.getItem('pimage'))
+        document.getElementById("product-name").innerHTML = localStorage.getItem('pname')
+        document.getElementById("product-price").innerHTML = localStorage.getItem('pprice')
+    }
+    showProduct()
+
+
+    
+</script>
+<header id="header">
+
+</header>
+<script src="assets/scripts/repeat.js"></script>
+<script src="assets/scripts/popper.min.js"></script>
+<script src="assets/scripts/my.js"></script>
+<script src="assets/scripts/bootstrap.min.js"></script>
+
+</html>

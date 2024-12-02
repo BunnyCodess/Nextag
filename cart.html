@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Cart</title>
+    <!-- icon link -->
+    <link rel="website icon" type="png" href="assets/images/logo.png">
+    <!-- icon link -->
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+</head>
+
+<body>
+  <header id="header">
+ 
+  </header>
+    <hr>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12  ">
+                <ul class="  breadcrumb align-items-center">
+                    <span class="h4 mt-2 fw-bolder">Shopping Cart</span>
+                    <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+                    <li class=""><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9 col-lg-9 col-xl-9 col-xxl-9 mt-3">
+                <table class="table">
+                   <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <script>
+                        function gotoDetailPage(name, image, price) {
+                          localStorage.setItem("pname", name)
+                          localStorage.setItem("pimage", image)
+                          localStorage.setItem("pprice", price)
+                          window.location.href = "product-details.html"
+                        }
+                        for (var i = 0; i < data.length; i++) {
+                          document.write(`<div class="col-md-2 productCard" onclick='gotoDetailPage("${data[i].p_name}","${data[i].p_image}","${data[i].p_price}")'>
+                              <div class="product-card">
+                                <img src="${data[i].p_image}" class="img-fluid imgborder" alt=""/>
+                                  <p class="txt3">New Accessory, Processors</p>
+                                  <a href="product-details.html" class="txt4">${data[i].p_name}</a>
+                                  <div class="div">
+                                    <i class="fa-solid fa-star" style="color: #848484; font-size: 11px; "></i>
+                                    <i class="fa-solid fa-star" style="color: #848484; font-size: 11px; "></i>
+                                    <i class="fa-solid fa-star" style="color: #848484; font-size: 11px; "></i>
+                                    <i class="fa-solid fa-star" style="color: #848484; font-size: 11px; "></i>
+                                    <i class="fa-solid fa-star" style="color: #848484; font-size: 11px; "></i>
+                                  </div>
+                                  <h5 class="price">${data[i].p_price}</h5>
+                              </div>
+                            </div>`)
+                        }
+                      </script>
+                        <tr class="align-middle">
+
+                            <td><img src="assets/brand pics/Gucci/GG Emblem small shoulder bag Black.jpg"width="100px" height="170px" alt="">GUCCI GG EMBLEM BLACK</td>
+                            <td class="txt5 ">$980.00</td>
+                            <td>
+                                <div class="custom d-flex  justify-content-between  align-items-center">
+                                    <button onclick="minus()">-</button>
+                                    <p id="e" class="m-0">1</p>
+                                    <button onclick="plus()">+</button>
+
+                                </div>
+                            </td>
+                            <td class="txt5">$980.00</td>
+                            <td><i class="fa-solid fa-x"></i></td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <div class="col-md-3 cartborder">
+
+                <h4 class="txt2">CART TOTALS</h4>
+                <div class="d-flex justify-content-between">
+                    <span class="txt5">Subtotal</span>
+                    <span class="txt5">$980.00</span>
+
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span class="txt5">Shipping</span>
+                    <span class="txt5">$20.00</span>
+
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span class="txt5">Total</span>
+                    <span class="txt5">$1000.00</span>
+
+                </div>
+
+                <a href="checkout.html"><button class="w-100 mt-4 custombtn3">PROCEED TO CHECKOUT</button></a>
+            </div>
+            <div class="row">
+                <div class="col-md-10 ">
+                    <table class="justify-content-between d-flex">
+                        <tr>
+
+                            <td>
+                                <form>
+                                    <input type="text" class="Coupon " placeholder="Coupon Code">
+                                    <button class="custombtn4 ">Apply Coupon</button>
+                                </form>
+                            </td>
+
+
+                            <td><button class="custombtn4">EMPTY CART</button></td>
+                            <td><button class="custombtn4">UPDATE CART</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+    
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+
+
+
+</body>
+<script src="assets/scripts/repeat.js"></script>
+<script src="assets/scripts/my.js"></script>
+<script src="assets/scripts/popper.min.js"></script>
+<script src="assets/scripts/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Contact</title>
+    <!-- icon link -->
+    <link rel="website icon" type="png" href="assets/images/logo.png">
+    <!-- icon link -->
+     <!-- css link -->
+      <link rel="stylesheet" href="style.css">
+     <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- google font link -->
+</head>
+<body>
+  <header id="header">
+ 
+  </header>
+      <hr>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="home.html"><span class="span2">Home</span></a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 mt-4">
+               <h2 class="hcon">Do you have some questions?</h2>
+               <p class="hp">We are at your disposal 7 days a week!</p>
+               <div class="footer-icon">
+                <i class="fa-solid fa-phone"></i> <span class="footicon ps-2">+92 3312544599</span><br>
+                <i class="fa-brands fa-whatsapp"></i> <span class="footicon ps-2">+92 3312544599</span><br> 
+                <i class="fa-solid fa-mobile-screen"></i> <span class="footicon ps-2">-</span><br> 
+                <i class="fa-regular fa-envelope"></i> <span class="footicon ps-2">Aptech@gmail.com</span><br> 
+              </div>
+              <div class="social-links mt-3">
+                <a href=""><i class="fa-brands fa-facebook ps-2 pe-3"></i></a>
+                <a href=""><i class="fa-brands fa-instagram ps-2 pe-3"></i></a>
+                <a href=""><i class="fa-brands fa-youtube ps-2 pe-3"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok ps-2 pe-3"></i></a>
+            </div>
+            </div>
+            <div class="col-md-6 mt-5 mb-2">
+              <form onsubmit="validateForm(event)">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" required placeholder="First Name" name="firstName">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" required placeholder="Last Name" name="lastName">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="number" class="form-control" required placeholder="Phone Number" name="number">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="email" class="form-control" required placeholder="Email" name="email">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <textarea rows="4" cols="50" required class="form-control" placeholder="Message" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-2 btncon">SUBMIT NOW</button>
+                </div>
+            </form>
+            </div>
+        </div>
+      </div>
+      <hr>
+
+
+
+      <footer id="footer">
+    
+      </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+
+
+
+    <script>
+      function validateForm(event) {
+          const inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+          let valid = true;
+
+          inputs.forEach(input => {
+              input.value = input.value.trim(); 
+
+              
+            
+          });
+
+          if (!valid) {
+              event.preventDefault(); 
+          }
+      }
+  </script>
+
+</body>
+</html>
+<script src="assets/scripts/repeat.js"></script>
+<script src="assets/scripts/popper.min.js"></script>
+<script src="assets/scripts/bootstrap.min.js"></script>

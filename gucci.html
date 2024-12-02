@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Gucci</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+    <script src="assets/json/data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12  ">
+                <ul class="  breadcrumb align-items-center">
+                    <span class="h4 mt-2 fw-bolder txt2">Gucci</span>
+                    <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+                    <li class=""><a href="gucci.html">Gucci</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+    <div class="row" id="product-container">
+        <script>
+            function gotoDetailPage(name, image, price) {
+                localStorage.setItem("pname", name);
+                localStorage.setItem("pimage", image);
+                localStorage.setItem("pprice", price);
+                window.location.href = "product-details.html"; 
+            }
+        
+            
+            var gproduct = [
+    {
+        "gname": "GUCCI GG EMBLEM BLACK",
+        "gdetails": "Sleek black shoulder bag for everyday use.",
+        "gprice": "$980.00",
+        "gimage": "assets/brand pics/Gucci/GG Emblem small shoulder bag Black.jpg"
+    },
+    {
+        "gname": "GUCCI GG EMBLEM BROWN",
+        "gdetails": "Elegant brown shoulder bag with classic logo.",
+        "gprice": "$1,050.00",
+        "gimage": "assets/brand pics/Gucci/GG Emblem small shoulder bag Brown.jpg"
+    },
+    {
+        "gname": "GUCCI HORSEBIT 1955 ",
+        "gdetails": "Chic mini shoulder bag with vintage charm.",
+        "gprice": "$1,150.00",
+        "gimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 mini shoulder bag Cream.jpg"
+    },
+    {
+        "gname": "GUCCI HORSEBIT 1955",
+        "gdetails": "Stylish maroon mini shoulder bag with hardware.",
+        "gprice": "$1,200.00",
+        "gimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 mini shoulder bag Maroon.jpg"
+    },
+    {
+        "gname": "GUCCI HORSEBIT 1955",
+        "gdetails": "Timeless cream small shoulder bag with elegance.",
+        "gprice": "$1,180.00",
+        "gimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 small shoulder bag Cream.jpg"
+    },
+    {
+        "gname": "GUCCI HORSEBIT 1955",
+        "gdetails": "Classic maroon small shoulder bag with luxury appeal.",
+        "gprice": "$1,250.00",
+        "gimage": "assets/brand pics/Gucci/Gucci Horsebit 1955 small shoulder bag Maroon.jpg"
+    },
+    {
+        "gname": "GUCCI JUMBO GG",
+        "gdetails": "Bold GG logo pouch with versatile design.",
+        "gprice": "$850.00",
+        "gimage": "assets/brand pics/Gucci/Jumbo_GG_pouch-removebg-preview.png"
+    },
+    {
+        "gname": "GUCCI JUMBO GG SUPER",
+        "gdetails": "Mini GG bag with a modern flair.",
+        "gprice": "$980.00",
+        "gimage": "assets/brand pics/Gucci/Jumbo_GG_super_mini_bag-removebg-preview.png"
+    },
+    {
+        "gname": "GUCCI SMALL GG",
+        "gdetails": "Trendy crossbody bag with signature GG style.",
+        "gprice": "$950.00",
+        "gimage": "assets/brand pics/Gucci/Small_GG_crossbody_bag-removebg-preview.png"
+    },
+    {
+        "gname": "GUCCI SUPER MINI GG",
+        "gdetails": "Compact mini bag with iconic GG logo.",
+        "gprice": "$850.00",
+        "gimage": "assets/brand pics/Gucci/Super_mini_GG_bag-removebg-preview.png"
+    }
+];
+
+        
+           
+            for (var i = 0; i < gproduct.length; i++) {
+              
+                if (gproduct[i].gname && gproduct[i].gdetails) {
+                    document.write(`
+                        <div class="col-md-4 productCard" onclick='gotoDetailPage("${gproduct[i].gname}", "${gproduct[i].gimage}", "${gproduct[i].gprice}")'>
+                            <div class="product-card">
+                                <div class="div">
+                                    <img src="${gproduct[i].gimage}" class="img-fluid imgborder" alt=""/>
+                                </div>
+                                <a href="product-details.html" class="txt4">${gproduct[i].gname}</a>
+                                <p class="txt3">${gproduct[i].gdetails}</p>
+                                <h5 class="price">${gproduct[i].gprice}</h5>
+                            </div>
+                        </div>
+                    `);
+                }
+            }
+        </script>
+        
+    </div>
+
+</div>
+
+
+
+    <footer id="footer">
+
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="assets/scripts/repeat.js"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+
+
+    <script>
+        function displayProducts() {
+            const row = document.getElementById("product-container")
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

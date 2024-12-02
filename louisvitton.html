@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Louis Vitton</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+    <script src="assets/json/data.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+
+    </header>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12  ">
+                <ul class="  breadcrumb align-items-center">
+                    <span class="h4 mt-2 fw-bolder txt2">Louis Vitton</span>
+                    <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+                    <li class=""><a href="louisvitton.html">Louis Vitton</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+    <div class="row" id="product-container">
+        <script>
+            function gotoDetailPage(name, image, price) {
+                localStorage.setItem("pname", name);
+                localStorage.setItem("pimage", image);
+                localStorage.setItem("pprice", price);
+                window.location.href = "product-details.html"; 
+            }
+        
+            
+            var lproduct = [
+    {
+        "lname": "BOULOGE BLACK",
+        "ldetails": "Elegant, timeless design in classic black.",
+        "lprice": "$980.00",
+        "limage": "assets/brand pics/Loius Vitton/BOULOGE_BLACK-removebg-preview.png"
+    },
+    {
+        "lname": "BOULOGE BROWN BLACK",
+        "ldetails": "Sophisticated blend of brown and black.",
+        "lprice": "$1,050.00",
+        "limage": "assets/brand pics/Loius Vitton/BOULOGE_BROWN_BLACK-removebg-preview.png"
+    },
+    {
+        "lname": "BOULOGE CREAM",
+        "ldetails": "Soft, neutral tone for versatile style.",
+        "lprice": "$950.00",
+        "limage": "assets/brand pics/Loius Vitton/BOULOGE_CREAM-removebg-preview.png"
+    },
+    {
+        "lname": "BOSPHORE WEARABLE",
+        "ldetails": "Modern, functional wearable with sleek design.",
+        "lprice": "$1,200.00",
+        "limage": "assets/brand pics/Loius Vitton/louis-vuitton-bosphore-wearable-removebg-preview.png"
+    },
+    {
+        "lname": "DOUBLE CARD HOLDER",
+        "ldetails": "Compact, efficient holder for your essentials.",
+        "lprice": "$350.00",
+        "limage": "assets/brand pics/Loius Vitton/louis-vuitton-double-card-holder-removebg-preview.png"
+    },
+    {
+        "lname": "ENVELOPPE CARTE DE",
+        "ldetails": "Chic envelope-style card holder for convenience.",
+        "lprice": "$450.00",
+        "limage": "assets/brand pics/Loius Vitton/louis-vuitton-enveloppe-carte-de-removebg-preview.png"
+    },
+    {
+        "lname": "STEAMER WEARABLE BROWN",
+        "ldetails": "Stylish, comfortable brown wearable for daily use.",
+        "lprice": "$1,150.00",
+        "limage": "assets/brand pics/Loius Vitton/louis-vuitton-steamer-wearable-w-removebg-preview.png"
+    },
+    {
+        "lname": "STEAMER WEARABLE BLACK",
+        "ldetails": "Sleek black wearable with effortless style.",
+        "lprice": "$1,180.00",
+        "limage": "assets/brand pics/Loius Vitton/louis-vuitton-steamer-wearable-w__1_-removebg-preview.png"
+    },
+    {
+        "lname": "SUNSET",
+        "ldetails": "Warm, golden hues capturing sunset vibes.",
+        "lprice": "$850.00",
+        "limage": "assets/brand pics/Loius Vitton/SUNSET-removebg-preview.png"
+    },
+    {
+        "lname": "SUNSET VIBE",
+        "ldetails": "Relaxing, warm tones inspired by sunsets.",
+        "lprice": "$870.00",
+        "limage": "assets/brand pics/Loius Vitton/SUNSET_VIBE-removebg-preview.png"
+    }
+];
+
+
+        
+            
+            for (var i = 0; i < lproduct.length; i++) {
+               
+                if (lproduct[i].lname && lproduct[i].ldetails) {
+                    document.write(`
+                        <div class="col-md-4 productCard" onclick='gotoDetailPage("${lproduct[i].lname}", "${lproduct[i].limage}", "${lproduct[i].lprice}")'>
+                            <div class="product-card">
+                                <div class="div">
+                                    <img src="${lproduct[i].limage}" class="img-fluid imgborder" alt=""/>
+                                </div>
+                                <a href="product-details.html" class="txt4">${lproduct[i].lname}</a>
+                                <p class="txt3">${lproduct[i].ldetails}</p>
+                                <h5 class="price">${lproduct[i].lprice}</h5>
+                            </div>
+                        </div>
+                    `);
+                }
+            }
+        </script>
+        
+    </div>
+
+</div>
+
+
+
+    <footer id="footer">
+
+    </footer>
+    <a href="" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="assets/scripts/repeat.js"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
+
+
+    <script>
+        function displayProducts() {
+            const row = document.getElementById("product-container")
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

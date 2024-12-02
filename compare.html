@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextag - Compare</title>
+  
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <!-- bootstrap 5 cdn -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- bootstrap 5 cdn -->
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/font-all.min.css">
+    <!-- font awesome cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- google font link -->
+  </head>
+
+<body>
+
+    <header id="header"></header>
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12  ">
+            <ul class="  breadcrumb align-items-center">
+              <span class="h4 mt-2 fw-bolder">Compare</span>
+              <li class="ms-auto"><a href="home.html"><span class="span2 ">Home</span></a></li>
+              <li class=""><a href="compare.html">Compare</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <h1 class="display-5 my-5 text-center">Compare your product here!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+                <table class="table">
+                    <tr class="bg-light">
+                        <th>Select Product</th>
+                        <th>
+                            <select class="form-control" id="select1" onchange="prods(this.value)">
+                                <option value="0">--Select Anyone--</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select class="form-control" id="select2" onchange="prods2(this.value)">
+                                <option value="0">--Select Anyone--</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Product image</th>
+                        <td>
+                            <img src="assets/images/noimagepalceholder.png" id="img1">
+                        </td>
+                        <td>
+                            <img src="assets/images/noimagepalceholder.png" id="img2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Product Price</th>
+                        <td id="price1"></td>
+                        <td id="price2"></td>
+                    </tr>
+                    <tr>
+                        <th>Product Description</th>
+                        <td id="desc1"></td>
+                        <td id="desc2"></td>
+                    </tr>
+                    <tr>
+                        <th>Product Brand</th>
+                        <td id="brand"></td>
+                        <td id="brand2"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="assets/json/product.js"></script>
+    <script>
+        for (var i = 1; i < alldata.length; i++) {
+            document.getElementById("select1").innerHTML += `
+                <option value="${i}">${alldata[i].allname}</option>
+            `;
+            document.getElementById("select2").innerHTML += `
+                <option value="${i}">${alldata[i].allname}</option>
+            `;
+        }
+
+        function prods(a) {
+            var select2 = document.getElementById("select2").value;
+            if (a != select2) {
+                document.getElementById("img1").src = alldata[a].allimage;
+                document.getElementById("price1").innerHTML = alldata[a].allprice;
+                document.getElementById("desc1").innerHTML = alldata[a].alldetails;
+                document.getElementById("brand").innerHTML = alldata[a].allname;
+            } else {
+                document.getElementById("img1").src = alldata[0].allimage;
+                document.getElementById("price1").innerHTML = "";
+                document.getElementById("desc1").innerHTML = "";
+                document.getElementById("brand").innerHTML = "";
+            }
+        }
+
+        function prods2(a) {
+            var select1 = document.getElementById("select1").value;
+            if (a != select1) {
+                document.getElementById("img2").src = alldata[a].allimage;
+                document.getElementById("price2").innerHTML = alldata[a].allprice;
+                document.getElementById("desc2").innerHTML = alldata[a].alldetails;
+                document.getElementById("brand2").innerHTML = alldata[a].allname;
+            } else {
+                document.getElementById("img2").src = alldata[0].allimage;
+                document.getElementById("price2").innerHTML = "";
+                document.getElementById("desc2").innerHTML = "";
+                document.getElementById("brand2").innerHTML = "";
+                alert("Please choose a different one");
+            }
+        }
+    </script>
+        <script src="assets/scripts/repeat.js"></script>
+       
+
+</body>
+
+</html>
